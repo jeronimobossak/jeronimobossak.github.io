@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>JB Design — Desenvolvedor</title>
+  <!-- Link para CSS (será criado na próxima etapa) -->
+<link rel="stylesheet" href="styles.css">
+  <!-- Ícone minimal (inline) -->
+  <meta name="theme-color" content="#0b1020">
+</head>
+<body class="page">
+</body>
+<script src="script.js"></script>
+    <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#" aria-label="Página inicial - JB Design">
+        <!-- Marca curta -->
+        <strong>JB</strong>
+        <span class="brand-tagline">Código que empurra o futuro</span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#portfolio">Portfólio</a></li>
+          <li><a href="#contato" class="cta">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Sou Jeronimo Bossak — Desenvolvedor de Sites</h1>
+          <p class="lead">
+           Criação de sites do zero, front-end até o back-end.
+          </p>
+
+          <div class="hero-actions">
+            <!-- Botões preparados para animação; JS/CSS irão animar usando data-motion -->
+           <a href="#portfolio" class="btn btn-primary" data-motion="glow-1">Ver portfólio</a>
+            <a href="#contato" class="btn btn-ghost" data-motion="slide-1">Contrate-me</a>
+          </div>
+
+          <ul class="quick-contacts" aria-hidden="false">
+            <li>
+              <a href="https://instagram.com/jeronimo_bossak" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Jerônimo">
+                @jeronimo_bossak
+              </a>
+            </li>
+            <li>
+              <a href="mailto:jeronimobossak036@gmail.com" aria-label="Enviar e-mail para Jeronimo">
+                jeronimobossak036@gmail.com
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <!-- Placeholder para um visual futurista (SVG ou imagem que será adicionada via CSS/Imagem) -->
+          <svg width="360" height="240" viewBox="0 0 360 240" xmlns="http://www.w3.org/2000/svg" class="hero-shape" role="img" aria-label="Ilustração futurista">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0" stop-color="#00f0ff"/>
+                <stop offset="1" stop-color="#6b00ff"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" rx="18" fill="url(#g1)" opacity="0.08"/>
+            <g transform="translate(20,20)" fill="none" stroke="#fff" stroke-opacity="0.12">
+              <circle cx="160" cy="100" r="70"/>
+              <path d="M40 180 L320 40" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="about container">
+      <h2>Sobre mim</h2>
+      <p>
+        Sou desenvolvedor focado em front-end (HTML, CSS e JavaScript) e back-end  — construindo experiências rápidas,
+
+      </p>
+      <p>
+        Gosto de transformar ideias em interfaces limpas e interativas que convertem visitantes em clientes.
+      </p>
+    </section>
+
+    <!--Portfólio (placeholder)-->
+  <section id="portfolio" class="portfolio container">
+  <h2>Portfólio</h2>
+  <div class="portfolio-grid">
+    
+    <article class="card portfolio-item">
+      <h4>Meus Projetos</h4>
+      <p>Veja todos os meus trabalhos no GitHub.</p>
+      <a class="card-btn" href="https://github.com/jeronimobossak" target="_blank">Ver no GitHub</a>
+    </article>
+
+  </div>
+</section>
+
+
+    <!-- Contato -->
+    <section id="contato" class="contact container">
+      <h2>Contato</h2>
+      <p>Entre em contato para orçamentos, dúvidas ou propostas.</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h4>Email</h4>
+          <a href="mailto:jeronimobossak036@gmail.com">jeronimobossak036@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+          <h4>Instagram</h4>
+          <a href="https://instagram.com/jeronimo_bossak" target="_blank" rel="noopener noreferrer">@jeronimo_bossak</a>
+        </div>
+
+        <div class="contact-card">
+          <h4>Mensagem rápida</h4>
+          <!-- Este botão pode abrir um modal/scroll ou iniciar animação via JS -->
+          <button class="btn btn-primary" data-action="open-contact-form" data-motion="pulse">Enviar mensagem</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> JB Design — Desenvolvedor. Todos os direitos reservados.</small>
+      <nav class="socials" aria-label="Redes sociais">
+        <a href="https://instagram.com/jeronimo_bossak" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="mailto:jeronimobossak036@gmail.com">Email</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Script (será criado na etapa JS) -->
+  <script src="script.js" defer></script>
+  <script>
+    // Fallback JS mínimo (não substitui script.js)
+    // Atualiza o ano automaticamente — isto é seguro e simples.
+    (function(){ document.getElementById('year').textContent = new Date().getFullYear(); })();
+  </script>
+  <!-- Observações: o CSS (styles.css) vai estilizar o layout futurista e as animações dos botões;
+       o JS (script.js) poderá controlar efeitos avançados (movimentação, micro-interações, modais, smooth scroll). -->
+</body>
+</html>
